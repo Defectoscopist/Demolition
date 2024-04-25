@@ -91,6 +91,8 @@ public class Slingshot : MonoBehaviour
             projectileRigidbody.velocity = -mouseDelta * velocityMult; // запускаем шарик
             FollowCam.POI = projectile; // камера следит за шариком
             projectile = null;
+            MissionDemolition.ShotFired();
+            ProjectileLine.S.poi = projectile;
         }
         // страница 551, можно потестировать
     }
